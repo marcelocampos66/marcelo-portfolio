@@ -6,6 +6,8 @@ const SwitchButton: React.FC = () => {
   const { theme, setTheme } = useContext(AppContext);
   
   const onClick = () => {
+    const obj: { theme: boolean } = { theme: !theme };
+    localStorage.setItem('marcelotheme', JSON.stringify(obj));
     setTheme(!theme);
   }
 

@@ -1,27 +1,32 @@
 import React from 'react';
-import Styled from './S.NavBar';
-import { Link } from 'react-router-dom';
 import SwitchButton from '../SwitchButton';
+import logo from '../../images/hello-world.png';
+import Styled from './S.NavBar';
 
 const NavBar: React.FC = () => {
   return (
     <Styled.Nav>
       <Styled.DivLogo>
-        LOGO
+        <Styled.LinkImg to='/'>
+          <Styled.Img
+            src={ logo }
+            alt="logo navbar"
+          />
+        </Styled.LinkImg>
       </Styled.DivLogo>
       <Styled.DivLinks>
-        <Link to='/'>
+        <Styled.Link to='/'>
           Home
-        </Link>
-        <Link to='/'>
+        </Styled.Link>
+        <Styled.Link to='/about'>
           About
-        </Link>
-        <Link to='/'>
+        </Styled.Link>
+        <Styled.Link to='/portfolio'>
           Portfolio
-        </Link>
-        <Link to='/'>
+        </Styled.Link>
+        <Styled.Link to='/contact'>
           Contact
-        </Link>
+        </Styled.Link>
       </Styled.DivLinks>
       <SwitchButton />
     </Styled.Nav>
